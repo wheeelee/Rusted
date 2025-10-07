@@ -1,8 +1,9 @@
 package com.example;
 
+import com.example.block.ModBlocks;
 import com.example.item.ModItems;
+import com.example.item.ModItemsGroups;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 //УРА
@@ -12,6 +13,8 @@ public class Rusted implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemsGroups.registerItemGroups();
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 	}
 }

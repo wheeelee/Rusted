@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "rusted:block/clean_crystal_block"
+    }
+  }
+}
