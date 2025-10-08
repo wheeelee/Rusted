@@ -15,12 +15,16 @@ public class ModItemsGroups {
 
     public static final ItemGroup RUSTED_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Rusted.MOD_ID, "rusted"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CLEAN_CRYSTAL))
-                    .displayName(Text.translatable("itemgroup.rusted"))
+            FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(ModItems.CLEAN_CRYSTAL))
+                    .displayName(Text.translatable("itemGroup.rusted"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CLEAN_CRYSTAL);
-                    }).build());
-
+                        entries.add(ModBlocks.CLEAN_CRYSTAL_BLOCK);
+                        // entries.add(ModItems.RUSTED_INGOT);
+                        // entries.add(ModBlocks.ANOTHER_BLOCK);
+                    })
+                    .build());
     public static void registerItemGroups() {
         Rusted.LOGGER.info("Registering Item Groups for " + Rusted.MOD_ID);
     }
