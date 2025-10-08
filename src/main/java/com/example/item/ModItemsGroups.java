@@ -21,6 +21,8 @@ public class ModItemsGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CLEAN_CRYSTAL);
                         entries.add(ModBlocks.CLEAN_CRYSTAL_BLOCK);
+                        entries.add(ModBlocks.CLEAN_CRYSTAL_ORE);
+                        entries.add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
                         // entries.add(ModItems.RUSTED_INGOT);
                         // entries.add(ModBlocks.ANOTHER_BLOCK);
                     })
