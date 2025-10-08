@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    private static final Block CLEAR_CRYSTAL_BLOCK = registerBlock("clean_crystal_block",
+    public static final Block CLEAN_CRYSTAL_BLOCK = registerBlock("clean_crystal_block",
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
@@ -30,9 +30,5 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         Rusted.LOGGER.info("Registering Mod Blocks for " + Rusted.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(CLEAR_CRYSTAL_BLOCK);
-        });
     }
 }

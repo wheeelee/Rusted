@@ -1,6 +1,5 @@
 {
   "item.rusted.clean_crystal": "Clean Crystal",
-  "itemGroup.rusted.group": "Rusted",
-
+  "itemGroup.rusted": "Rusted",
   "block.rusted.clean_crystal_block": "Block of Clean Crystal"
 }
