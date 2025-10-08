@@ -2,5 +2,7 @@
   "item.rusted.clean_crystal": "Чистый кристалл",
   "itemGroup.rusted.group": "Rusted",
 
-  "block.rusted.clean_crystal_block": "Блок чистого кристалла"
+  "block.rusted.clean_crystal_block": "Блок чистого кристалла",
+  "block.rusted.clean_crystal_deepslate_ore": "Глубокосланцевая руда чистого кристалла",
+  "block.rusted.clean_crystal_ore": "Руда чистого кристалла"
 }
