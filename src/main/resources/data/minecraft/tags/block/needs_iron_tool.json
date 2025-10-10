@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "rusted:clean_crystal_ore",
+    "rusted:clean_crystal_block"
+  ]
+}

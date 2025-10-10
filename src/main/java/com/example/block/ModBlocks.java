@@ -17,16 +17,16 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 public class ModBlocks {
 
     public static final Block CLEAN_CRYSTAL_BLOCK = registerBlock("clean_crystal_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
+            new Block(AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     public static final Block CLEAN_CRYSTAL_ORE = registerBlock("clean_crystal_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,4),
-                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)));
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
     public static final Block CLEAN_CRYSTAL_DEEPSLATE_ORE = registerBlock("clean_crystal_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,4),
-                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
