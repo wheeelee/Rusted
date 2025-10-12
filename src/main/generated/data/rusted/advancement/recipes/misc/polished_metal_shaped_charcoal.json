@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rusty_metal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "rusted:rusty_metal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:polished_metal_shaped_charcoal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rusty_metal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:polished_metal_shaped_charcoal"
+    ]
+  }
+}

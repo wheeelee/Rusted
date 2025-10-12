@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "dirty_crystal",
+  "ingredient": {
+    "item": "rusted:clean_crystal_deepslate_ore"
+  },
+  "result": {
+    "id": "rusted:dirty_crystal"
+  }
+}

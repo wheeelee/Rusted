@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:charcoal"
+    },
+    "D": {
+      "item": "rusted:dirty_crystal"
+    }
+  },
+  "pattern": [
+    "DC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusted:clean_crystal"
+  }
+}

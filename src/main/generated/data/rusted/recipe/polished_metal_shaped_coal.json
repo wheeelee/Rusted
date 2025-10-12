@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "P": {
+      "item": "rusted:rusty_metal"
+    }
+  },
+  "pattern": [
+    "PC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusted:polished_metal"
+  }
+}

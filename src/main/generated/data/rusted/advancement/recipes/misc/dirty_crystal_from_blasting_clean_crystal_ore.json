@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clean_crystal_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "rusted:clean_crystal_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:dirty_crystal_from_blasting_clean_crystal_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clean_crystal_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:dirty_crystal_from_blasting_clean_crystal_ore"
+    ]
+  }
+}
