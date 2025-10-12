@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "rusted:rusty_metal"
+    },
+    "X": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
+  },
+  "pattern": [
+    "X#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rusted:polished_metal"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "rusted:clean_crystal",
+    "rusted:dirty_crystal",
+    "rusted:rusty_metal",
+    "rusted:polished_metal",
+    "minecraft:coal"
+  ]
+}
