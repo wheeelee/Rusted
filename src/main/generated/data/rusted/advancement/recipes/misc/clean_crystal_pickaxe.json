@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clean_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "rusted:clean_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:clean_crystal_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clean_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:clean_crystal_pickaxe"
+    ]
+  }
+}

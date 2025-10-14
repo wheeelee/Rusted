@@ -60,5 +60,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', Items.CHARCOAL)
                 .criterion(hasItem(ModItems.RUSTY_METAL),conditionsFromItem(ModItems.RUSTY_METAL))
                 .offerTo(recipeExporter,"polished_metal_shaped_charcoal");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_PICKAXE)
+                .pattern("CPC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('P',ModItems.POLISHED_METAL)
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_pickaxe");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_SWORD)
+                .pattern(" C ")
+                .pattern(" P ")
+                .pattern(" S ")
+                .input('P',ModItems.POLISHED_METAL)
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_sword");
     }
 }

@@ -1,11 +1,13 @@
-// 1.21	2025-10-12T15:10:56.0310171	Rusted/Model Definitions
+// 1.21	2025-10-15T00:56:43.1286344	Rusted/Model Definitions
 b2a7a6eff0b942b6de11d25c21855f5545ecab2c assets\rusted\models\block\clean_crystal_block.json
 5a4bfdaa08a75f5acc85248173244f5fa723c975 assets\rusted\models\item\clean_crystal_block.json
-ee9246eae876253324c943838ea2ca5712e7ceea assets\rusted\models\block\clean_crystal_deepslate_ore.json
 a7da24191cb8f602964fc267b261367c06712639 assets\rusted\models\item\rusty_metal.json
+ee9246eae876253324c943838ea2ca5712e7ceea assets\rusted\models\block\clean_crystal_deepslate_ore.json
 6274056ef536c95f69e4cedfc01ef5db2dd143b6 assets\rusted\blockstates\clean_crystal_deepslate_ore.json
 d137fd8ec1b7d8dca601a8b4f4cb3515227f85a4 assets\rusted\models\item\clean_crystal.json
 7837ca2c9ad41be0a61986d38b9fb8075397bf76 assets\rusted\models\item\clean_crystal_deepslate_ore.json
+57b15a5b867306392c490ce33593f31b2ef27cf4 assets\rusted\models\item\clean_crystal_pickaxe.json
+16c505937ab3e72ae3621487660d37fde5551988 assets\rusted\models\item\clean_crystal_sword.json
 eb06f97d885de558a735d72bccc35843eb6595c4 assets\rusted\models\item\polished_metal.json
 32d439ed459e76ff4fe64e26bfac22f056202ecf assets\rusted\models\block\clean_crystal_ore.json
 74d9346ff2a74508d5c725adba50990a82d6095e assets\rusted\blockstates\clean_crystal_block.json

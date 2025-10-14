@@ -6,5 +6,7 @@
   "block.rusted.clean_crystal_ore": "Clean Crystal Ore",
   "item.rusted.dirty_crystal": "Dirty Crystal",
   "item.rusted.rusty_metal": "Rusty Metal",
-  "item.rusted.polished_metal": "Polished Metal"
+  "item.rusted.polished_metal": "Polished Metal",
+  "item.rusted.clean_crystal_sword": "Clean Crystal Sword",
+  "item.rusted.clean_crystal_pickaxe": "Clean Crystal Pickaxe"
 }

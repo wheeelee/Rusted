@@ -26,6 +26,8 @@ public class ModItemsGroups {
                         entries.add(ModItems.DIRTY_CRYSTAL);
                         entries.add(ModItems.RUSTY_METAL);
                         entries.add(ModItems.POLISHED_METAL);
+                        entries.add(ModItems.CLEAN_CRYSTAL_SWORD);
+                        entries.add(ModItems.CLEAN_CRYSTAL_PICKAXE);
                         // entries.add(ModItems.RUSTED_INGOT);
                     })
                     .build());

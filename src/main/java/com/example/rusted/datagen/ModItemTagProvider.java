@@ -4,6 +4,7 @@ import com.example.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import org.jetbrains.annotations.Nullable;
 import net.minecraft.item.Items;
 
@@ -17,6 +18,9 @@ public class ModItemTagProvider  extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        //ffff
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.CLEAN_CRYSTAL_SWORD);
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.CLEAN_CRYSTAL_PICKAXE);
     }
 }
