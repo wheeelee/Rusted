@@ -78,5 +78,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S',Items.STICK)
                 .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
                 .offerTo(recipeExporter,"clean_crystal_sword");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_SHOVEL)
+                .pattern(" C ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_shovel");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_AXE)
+                .pattern("PC ")
+                .pattern("CS ")
+                .pattern(" S ")
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('P',ModItems.POLISHED_METAL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_axe");
+
     }
 }

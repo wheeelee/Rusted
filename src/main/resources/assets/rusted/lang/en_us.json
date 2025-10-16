@@ -8,5 +8,7 @@
   "item.rusted.rusty_metal": "Rusty Metal",
   "item.rusted.polished_metal": "Polished Metal",
   "item.rusted.clean_crystal_sword": "Clean Crystal Sword",
-  "item.rusted.clean_crystal_pickaxe": "Clean Crystal Pickaxe"
+  "item.rusted.clean_crystal_pickaxe": "Clean Crystal Pickaxe",
+  "item.rusted.clean_crystal_shovel": "Clean Crystal Shovel",
+  "item.rusted.clean_crystal_axe": "Clean Crystal Axe"
 }

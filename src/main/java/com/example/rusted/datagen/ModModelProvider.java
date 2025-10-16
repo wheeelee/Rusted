@@ -29,5 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.POLISHED_METAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLEAN_CRYSTAL_PICKAXE,Models.HANDHELD);
         itemModelGenerator.register(ModItems.CLEAN_CRYSTAL_SWORD,Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CLEAN_CRYSTAL_SHOVEL,Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CLEAN_CRYSTAL_AXE,Models.HANDHELD);
     }
 }

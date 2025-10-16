@@ -22,5 +22,9 @@ public class ModItemTagProvider  extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CLEAN_CRYSTAL_SWORD);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.CLEAN_CRYSTAL_PICKAXE);
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.CLEAN_CRYSTAL_SHOVEL);
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.CLEAN_CRYSTAL_AXE);
     }
 }

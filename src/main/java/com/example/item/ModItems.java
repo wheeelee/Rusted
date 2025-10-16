@@ -24,6 +24,12 @@ public class ModItems {
     public static final Item CLEAN_CRYSTAL_PICKAXE =  registerItem("clean_crystal_pickaxe",
             new PickaxeItem(ModToolMaterials.CLEAN_CRYSTAL, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.CLEAN_CRYSTAL,1,-3.0f))));
+    public static final Item CLEAN_CRYSTAL_SHOVEL =  registerItem("clean_crystal_shovel",
+            new ShovelItem(ModToolMaterials.CLEAN_CRYSTAL, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.CLEAN_CRYSTAL,1,-2.4f))));
+    public static final Item CLEAN_CRYSTAL_AXE =  registerItem("clean_crystal_axe",
+            new AxeItem(ModToolMaterials.CLEAN_CRYSTAL, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.CLEAN_CRYSTAL,2,-2.4f))));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Rusted.MOD_ID, name), item);
     }

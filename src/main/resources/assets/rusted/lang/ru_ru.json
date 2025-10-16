@@ -8,5 +8,7 @@
   "block.rusted.clean_crystal_deepslate_ore": "Глубокосланцевая руда чистого кристалла",
   "block.rusted.clean_crystal_ore": "Руда чистого кристалла",
   "item.rusted.clean_crystal_sword": "Чистый кристалльный меч",
-  "item.rusted.clean_crystal_pickaxe": "Чистая кристалльная кирка"
+  "item.rusted.clean_crystal_pickaxe": "Чистая кристалльная кирка",
+  "item.rusted.clean_crystal_shovel": "Чистая кристалльная лопата",
+  "item.rusted.clean_crystal_axe": "Чистый кристалльный топор"
 }
