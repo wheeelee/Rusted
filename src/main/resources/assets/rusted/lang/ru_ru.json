@@ -15,5 +15,7 @@
   "item.rusted.clean_crystal_helmet": "Чистый кристальный шлем",
   "item.rusted.clean_crystal_chestplate": "Чистый кристальный нагрудник",
   "item.rusted.clean_crystal_leggings": "Чистые кристальные штаны",
-  "item.rusted.clean_crystal_boots": "Чистая кристальная обувь"
+  "item.rusted.clean_crystal_boots": "Чистая кристальная обувь",
+
+  "effect.rusted.rusty": "Заржавелость разума"
 }

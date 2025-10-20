@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.rusted.datagen.*;
+//import com.example.world.gen.ModWorldGeneration;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -15,5 +16,6 @@ public class RustedDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
+        //pack.addProvider(ModRegistryDataGenerator::new);
 	}
 }

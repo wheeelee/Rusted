@@ -15,5 +15,7 @@
   "item.rusted.clean_crystal_helmet": "Clean Crystal Helmet",
   "item.rusted.clean_crystal_chestplate": "Clean Crystal Chestplate",
   "item.rusted.clean_crystal_leggings": "Clean Crystal Leggings",
-  "item.rusted.clean_crystal_boots": "Clean Crystal Boots"
+  "item.rusted.clean_crystal_boots": "Clean Crystal Boots",
+
+  "effect.rusted.rusty": "Rusty"
 }
