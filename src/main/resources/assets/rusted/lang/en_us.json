@@ -10,5 +10,10 @@
   "item.rusted.clean_crystal_sword": "Clean Crystal Sword",
   "item.rusted.clean_crystal_pickaxe": "Clean Crystal Pickaxe",
   "item.rusted.clean_crystal_shovel": "Clean Crystal Shovel",
-  "item.rusted.clean_crystal_axe": "Clean Crystal Axe"
+  "item.rusted.clean_crystal_axe": "Clean Crystal Axe",
+
+  "item.rusted.clean_crystal_helmet": "Clean Crystal Helmet",
+  "item.rusted.clean_crystal_chestplate": "Clean Crystal Chestplate",
+  "item.rusted.clean_crystal_leggings": "Clean Crystal Leggings",
+  "item.rusted.clean_crystal_boots": "Clean Crystal Boots"
 }

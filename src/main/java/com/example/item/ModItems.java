@@ -30,6 +30,18 @@ public class ModItems {
     public static final Item CLEAN_CRYSTAL_AXE =  registerItem("clean_crystal_axe",
             new AxeItem(ModToolMaterials.CLEAN_CRYSTAL, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.CLEAN_CRYSTAL,2,-2.4f))));
+    public static final Item CLEAN_CRYSTAL_HELMET = registerItem("clean_crystal_helmet",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+    public static final Item CLEAN_CRYSTAL_CHESTPLATE = registerItem("clean_crystal_chestplate",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+    public static final Item CLEAN_CRYSTAL_LEGGINGS = registerItem("clean_crystal_leggings",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+    public static final Item CLEAN_CRYSTAL_BOOTS = registerItem("clean_crystal_boots",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Rusted.MOD_ID, name), item);
     }
