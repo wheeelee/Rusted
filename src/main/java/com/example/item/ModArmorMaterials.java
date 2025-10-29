@@ -24,7 +24,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.CHESTPLATE, 6);
                 map.put(ArmorItem.Type.HELMET, 2);
                 map.put(ArmorItem.Type.BODY, 4);
-            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.CLEAN_CRYSTAL),
+            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.CLEAN_CRYSTAL),
                     List.of(new ArmorMaterial.Layer(Identifier.of(Rusted.MOD_ID, "clean_crystal"))), 0, 0));
 
 
