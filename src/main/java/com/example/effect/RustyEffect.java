@@ -21,7 +21,7 @@ public class RustyEffect extends StatusEffect {
         ItemStack mainHandStack = player.getMainHandStack();
 
         if (!mainHandStack.isEmpty() && mainHandStack.isDamageable()) {
-            if (player.getWorld().getTime() % 20 == 0) {
+            if (player.getWorld().getTime() % 40 == 0) {
                 int damageAmount = amplifier + 1;
 
                 int newDamage = mainHandStack.getDamage() + damageAmount;
@@ -44,6 +44,6 @@ public class RustyEffect extends StatusEffect {
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         // Эффект будет применяться каждый тик (20 раз в секунду)
-        return true;
+        return duration % 40 == 0;
     }
 }

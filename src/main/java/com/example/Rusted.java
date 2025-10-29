@@ -4,7 +4,8 @@ import com.example.block.ModBlocks;
 import com.example.effect.ModEffects;
 import com.example.item.ModItems;
 import com.example.item.ModItemsGroups;
-//import com.example.world.gen.ModWorldGeneration;
+import com.example.world.gen.ModWorldGeneration;
+import com.example.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,6 @@ public class Rusted implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModItemsGroups.registerItemGroups();
         ModEffects.registerEffects();
-        //ModWorldGeneration.generateModWorldGen();
+        ModWorldGeneration.generateModWorldGen();
 	}
 }
