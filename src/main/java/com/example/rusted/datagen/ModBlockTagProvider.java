@@ -19,10 +19,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.CLEAN_CRYSTAL_BLOCK)
                 .add(ModBlocks.CLEAN_CRYSTAL_ORE)
+                .add(ModBlocks.RUSTY_METAL_ORE)
                 .add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CLEAN_CRYSTAL_ORE)
+                .add(ModBlocks.RUSTY_METAL_ORE)
                 .add(ModBlocks.CLEAN_CRYSTAL_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);

@@ -25,7 +25,7 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldCleanCrystalOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.CLEAN_CRYSTAL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables,ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE.getDefaultState()));
-        register(context,CLEAN_CRYSTAL_ORE_KEY,Feature.ORE, new OreFeatureConfig(overworldCleanCrystalOres,9));
+        register(context,CLEAN_CRYSTAL_ORE_KEY,Feature.ORE, new OreFeatureConfig(overworldCleanCrystalOres,5));
     }
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(Rusted.MOD_ID,name));

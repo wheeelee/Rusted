@@ -24,7 +24,7 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, CLEAN_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CLEAN_CRYSTAL_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(9,
+                ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
     }
 

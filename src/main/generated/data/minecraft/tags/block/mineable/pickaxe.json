@@ -2,6 +2,7 @@
   "values": [
     "rusted:clean_crystal_block",
     "rusted:clean_crystal_ore",
+    "rusted:rusty_metal_ore",
     "rusted:clean_crystal_deepslate_ore"
   ]
 }

@@ -28,6 +28,10 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2,4),
                     AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
+    public static final Block RUSTY_METAL_ORE = registerBlock("rusty_metal_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2,4),
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Rusted.MOD_ID, name), block);
