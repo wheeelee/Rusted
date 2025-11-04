@@ -9,5 +9,7 @@ public class ModOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.CLEAN_CRYSTAL_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.RUSTY_METAL_ORE_PLACED_KEY);
     }
 }

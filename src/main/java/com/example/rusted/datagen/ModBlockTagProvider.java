@@ -28,8 +28,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CLEAN_CRYSTAL_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
-
-
+        getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_CLEAN_CRYSTAL_TOOLS);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_CLEAN_CRYSTAL_TOOLS)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
     }

@@ -16,7 +16,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?,?>> CLEAN_CRYSTAL_ORE_KEY = registerKey("clean_crystal_ore");
-
+    public static final RegistryKey<ConfiguredFeature<?,?>> RUSTY_METAL_ORE_KEY = registerKey("rusty_metal_ore");
     public static void bootstrap(Registerable<ConfiguredFeature<?,?>> context) {
 
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -25,7 +25,11 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldCleanCrystalOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.CLEAN_CRYSTAL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables,ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE.getDefaultState()));
-        register(context,CLEAN_CRYSTAL_ORE_KEY,Feature.ORE, new OreFeatureConfig(overworldCleanCrystalOres,5));
+        register(context,CLEAN_CRYSTAL_ORE_KEY,Feature.ORE, new OreFeatureConfig(overworldCleanCrystalOres,9));
+        List<OreFeatureConfig.Target> overworldRustyMetalOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.RUSTY_METAL_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables,ModBlocks.RUSTY_METAL_ORE.getDefaultState()));
+        register(context,RUSTY_METAL_ORE_KEY,Feature.ORE, new OreFeatureConfig(overworldRustyMetalOres,12));
     }
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(Rusted.MOD_ID,name));

@@ -21,29 +21,22 @@ public class RustyEffect extends StatusEffect {
         ItemStack mainHandStack = player.getMainHandStack();
 
         if (!mainHandStack.isEmpty() && mainHandStack.isDamageable()) {
-            if (player.getWorld().getTime() % 40 == 0) {
-                int damageAmount = amplifier + 1;
+            int damageAmount = amplifier + 1;
+            int newDamage = mainHandStack.getDamage() + damageAmount;
+            mainHandStack.setDamage(newDamage);
 
-                int newDamage = mainHandStack.getDamage() + damageAmount;
-                mainHandStack.setDamage(newDamage);
-
-                // Проверяем, не сломался ли инструмент
-                if (mainHandStack.getDamage() >= mainHandStack.getMaxDamage()) {
-                    // Воспроизводим звук поломки
-                    player.getWorld().playSound(null, player.getBlockPos(),
-                            SoundEvents.ENTITY_ITEM_BREAK, player.getSoundCategory(), 1.0F, 1.0F);
-                    // Удаляем сломанный инструмент
-                    player.setStackInHand(player.getActiveHand(), ItemStack.EMPTY);
-                }
-                return true;
+            if (mainHandStack.getDamage() >= mainHandStack.getMaxDamage()) {
+                player.getWorld().playSound(null, player.getBlockPos(),
+                        SoundEvents.ENTITY_ITEM_BREAK, player.getSoundCategory(), 1.0F, 1.0F);
+                player.setStackInHand(player.getActiveHand(), ItemStack.EMPTY);
             }
+            return true;
         }
-        return true;
+        return false;
     }
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        // Эффект будет применяться каждый тик (20 раз в секунду)
-        return duration % 40 == 0;
+        return true;
     }
 }

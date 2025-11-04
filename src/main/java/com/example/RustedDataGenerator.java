@@ -20,9 +20,9 @@ public class RustedDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModAdvancementProvider::new);
         pack.addProvider(ModRegistryDataGenerator::new);
 	}
-
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);

@@ -19,12 +19,15 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> CLEAN_CRYSTAL_ORE_PLACED_KEY = registryKey("clean_crystal_ore_placed");
-
+    public static final RegistryKey<PlacedFeature> RUSTY_METAL_ORE_PLACED_KEY = registryKey("rusty_metal_ore_placed");
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, CLEAN_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CLEAN_CRYSTAL_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(5,
+                ModOrePlacement.modifiersWithCount(9,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+        register(context, RUSTY_METAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUSTY_METAL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(9,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
     }
 
