@@ -23,6 +23,12 @@
     ],
     "client": [
       "com.example.RustedClient"
+    ],
+    "terrablender": [
+      "com.example.world.biome.ModTerrablenderAPI"
+    ],
+    "fabric": [
+      "com.example.RustedFabricRegistries::register"
     ]
   },
   "mixins": [

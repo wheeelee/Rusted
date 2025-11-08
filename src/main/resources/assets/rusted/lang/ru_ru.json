@@ -17,6 +17,8 @@
   "item.rusted.clean_crystal_chestplate": "Чистый кристальный нагрудник",
   "item.rusted.clean_crystal_leggings": "Чистые кристальные штаны",
   "item.rusted.clean_crystal_boots": "Чистая кристальная обувь",
+  "block.rusted.rusted_dirt": "Ржавая земля",
 
-  "effect.rusted.rusty": "Заржавелость разума"
+  "effect.rusted.rusty": "Заржавелость разума",
+  "biome.rusted.rusty_deadlands": "Ржавые пустоши"
 }

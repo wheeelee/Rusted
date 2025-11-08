@@ -17,6 +17,7 @@
   "item.rusted.clean_crystal_chestplate": "Clean Crystal Chestplate",
   "item.rusted.clean_crystal_leggings": "Clean Crystal Leggings",
   "item.rusted.clean_crystal_boots": "Clean Crystal Boots",
-
-  "effect.rusted.rusty": "Rusty"
+  "block.rusted.rusted_dirt": "Rusted Dirt",
+  "effect.rusted.rusty": "Rusty",
+  "biome.rusted.rusty_deadlands": "Rusty Deadlands"
 }

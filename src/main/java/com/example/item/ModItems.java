@@ -16,7 +16,8 @@ public class ModItems {
     public static final Item DIRTY_CRYSTAL = registerItem("dirty_crystal",new Item(new Item.Settings()));
     public static final Item RUSTY_METAL = registerItem("rusty_metal",new Item(new Item.Settings()));
     public static final Item POLISHED_METAL = registerItem("polished_metal",new Item(new Item.Settings()));
-
+    public static final Item RUSTY = registerItem("rusty",
+            new Item(new Item.Settings()));
 
     public static final Item CLEAN_CRYSTAL_SWORD =  registerItem("clean_crystal_sword",
             new SwordItem(ModToolMaterials.CLEAN_CRYSTAL, new Item.Settings()
@@ -42,6 +43,7 @@ public class ModItems {
     public static final Item CLEAN_CRYSTAL_BOOTS = registerItem("clean_crystal_boots",
             new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Rusted.MOD_ID, name), item);
     }

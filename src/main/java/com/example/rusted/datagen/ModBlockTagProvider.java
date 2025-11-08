@@ -4,6 +4,7 @@ import com.example.block.ModBlocks;
 import com.example.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -20,8 +21,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CLEAN_CRYSTAL_BLOCK)
                 .add(ModBlocks.CLEAN_CRYSTAL_ORE)
                 .add(ModBlocks.RUSTY_METAL_ORE)
+                .add(ModBlocks.RUSTED_DIRT)
                 .add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
 
+        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.RUSTED_DIRT);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CLEAN_CRYSTAL_ORE)
                 .add(ModBlocks.RUSTY_METAL_ORE)

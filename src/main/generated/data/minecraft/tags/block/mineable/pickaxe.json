@@ -3,6 +3,7 @@
     "rusted:clean_crystal_block",
     "rusted:clean_crystal_ore",
     "rusted:rusty_metal_ore",
+    "rusted:rusted_dirt",
     "rusted:clean_crystal_deepslate_ore"
   ]
 }
