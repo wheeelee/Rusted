@@ -1,12 +1,21 @@
 package com.example;
 
+import com.example.entity.ModEntities;
+import com.example.entity.client.RustZombieModel;
+import com.example.entity.client.RustZombieRenderer;
 import com.example.item.ModItems;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 
 public class RustedClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
         ModItems.registerModItems();
+        EntityModelLayerRegistry.registerModelLayer(RustZombieModel.RUST_ZOMBIE, RustZombieModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.RUST_ZOMBIE, RustZombieRenderer::new);
     }
 }

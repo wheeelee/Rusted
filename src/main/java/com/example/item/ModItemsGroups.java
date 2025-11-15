@@ -25,11 +25,16 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
                         entries.add(ModItems.DIRTY_CRYSTAL);
                         entries.add(ModItems.RUSTY_METAL);
+                        entries.add(ModItems.RUSTY_METAL_HELMET);
+                        entries.add(ModItems.RUSTY_METAL_CHESTPLATE);
+                        entries.add(ModItems.RUSTY_METAL_LEGGINGS);
+                        entries.add(ModItems.RUSTY_METAL_BOOTS);
                         entries.add(ModItems.POLISHED_METAL);
                         entries.add(ModItems.CLEAN_CRYSTAL_SWORD);
                         entries.add(ModItems.CLEAN_CRYSTAL_PICKAXE);
                         entries.add(ModItems.CLEAN_CRYSTAL_SHOVEL);
                         entries.add(ModItems.CLEAN_CRYSTAL_AXE);
+                        entries.add(ModItems.RUST_ZOMBIE_SPAWN_EGG);
                         // entries.add(ModItems.RUSTED_INGOT);
                     })
                     .build());
