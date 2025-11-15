@@ -21,8 +21,10 @@ public class ModItemsGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CLEAN_CRYSTAL);
                         entries.add(ModBlocks.CLEAN_CRYSTAL_BLOCK);
+                        entries.add(ModBlocks.RUSTED_DIRT);
                         entries.add(ModBlocks.CLEAN_CRYSTAL_ORE);
                         entries.add(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
+                        entries.add(ModBlocks.RUSTY_METAL_ORE);
                         entries.add(ModItems.DIRTY_CRYSTAL);
                         entries.add(ModItems.RUSTY_METAL);
                         entries.add(ModItems.RUSTY_METAL_HELMET);

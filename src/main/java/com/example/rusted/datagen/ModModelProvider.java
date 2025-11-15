@@ -22,6 +22,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CLEAN_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CLEAN_CRYSTAL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUSTY_METAL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUSTED_DIRT);
 
     }
 

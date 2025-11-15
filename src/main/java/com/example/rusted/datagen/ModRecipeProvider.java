@@ -95,6 +95,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S',Items.STICK)
                 .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
                 .offerTo(recipeExporter,"clean_crystal_axe");
-
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_BOOTS)
+                .pattern("   ")
+                .pattern("C C")
+                .pattern("P P")
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('P',ModItems.POLISHED_METAL)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_boots");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_LEGGINGS)
+                .pattern("CCC")
+                .pattern("P P")
+                .pattern("P P")
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('P',ModItems.POLISHED_METAL)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_leggings");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_CHESTPLATE)
+                .pattern("C C")
+                .pattern("PPP")
+                .pattern("PPP")
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('P',ModItems.POLISHED_METAL)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_chestplate");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.CLEAN_CRYSTAL_HELMET)
+                .pattern("CPC")
+                .pattern("P P")
+                .pattern("   ")
+                .input('C', ModItems.CLEAN_CRYSTAL)
+                .input('P',ModItems.POLISHED_METAL)
+                .criterion(hasItem(ModItems.CLEAN_CRYSTAL),conditionsFromItem(ModItems.CLEAN_CRYSTAL))
+                .offerTo(recipeExporter,"clean_crystal_helmet");
     }
 }

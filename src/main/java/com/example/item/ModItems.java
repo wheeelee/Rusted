@@ -17,7 +17,8 @@ public class ModItems {
     public static final Item DIRTY_CRYSTAL = registerItem("dirty_crystal",new Item(new Item.Settings()));
     public static final Item RUSTY_METAL = registerItem("rusty_metal",new Item(new Item.Settings()));
     public static final Item POLISHED_METAL = registerItem("polished_metal",new Item(new Item.Settings()));
-
+    public static final Item RUSTY = registerItem("rusty",
+            new Item(new Item.Settings()));
 
     public static final Item CLEAN_CRYSTAL_SWORD =  registerItem("clean_crystal_sword",
             new SwordItem(ModToolMaterials.CLEAN_CRYSTAL, new Item.Settings()
