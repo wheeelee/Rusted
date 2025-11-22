@@ -36,6 +36,10 @@ public class ModItemsGroups {
                         entries.add(ModItems.CLEAN_CRYSTAL_PICKAXE);
                         entries.add(ModItems.CLEAN_CRYSTAL_SHOVEL);
                         entries.add(ModItems.CLEAN_CRYSTAL_AXE);
+                        entries.add(ModItems.CLEAN_CRYSTAL_HELMET);
+                        entries.add(ModItems.CLEAN_CRYSTAL_CHESTPLATE);
+                        entries.add(ModItems.CLEAN_CRYSTAL_LEGGINGS);
+                        entries.add(ModItems.CLEAN_CRYSTAL_BOOTS);
                         entries.add(ModItems.RUST_ZOMBIE_SPAWN_EGG);
                         // entries.add(ModItems.RUSTED_INGOT);
                     })
