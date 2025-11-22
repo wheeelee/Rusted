@@ -19,11 +19,14 @@ import net.minecraft.predicate.entity.EntityEffectPredicate;
 import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.predicate.entity.LootContextPredicate;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.ModStatus;
+import net.minecraft.world.World;
+
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
@@ -35,6 +38,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
     @Override
     public void generateAdvancement(RegistryWrapper.WrapperLookup wrapperLookup, Consumer<AdvancementEntry> consumer) {
         final RegistryWrapper.Impl<Item> itemLookup = wrapperLookup.getWrapperOrThrow(RegistryKeys.ITEM);
+        RegistryKey<World> OVERWORLD_KEY = RegistryKey.of(RegistryKeys.WORLD, Identifier.of("overworld"));
+        RegistryKey<World> RUSTY_DEADLANDS_KEY = RegistryKey.of(RegistryKeys.WORLD, Identifier.of(Rusted.MOD_ID, "rusty_deadlands"));
         AdvancementEntry EnterTheWorld = Advancement.Builder.create()
                 .display(
                         ModItems.CLEAN_CRYSTAL,
@@ -52,23 +57,23 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry got_rusty_metal = Advancement.Builder.create()
                 .parent(EnterTheWorld)
                 .display(
-                        ModBlocks.RUSTY_METAL_ORE,
+                        ModItems.RUSTY_METAL,
                         Text.literal("Важные мелочи"),
-                        Text.literal("Добыть руду окислившегося металла"),
+                        Text.literal("Найти в палатке ржавый необычный металл"),
                         null,
                         AdvancementFrame.TASK,
                         true,
                         true,
                         false
                 )
-                .criterion("got_rusty_metal_ore",InventoryChangedCriterion.Conditions.items(ModBlocks.RUSTY_METAL_ORE))
+                .criterion("got_rusty_metal_ore",InventoryChangedCriterion.Conditions.items(ModItems.RUSTY_METAL))
                 .build(consumer, Rusted.MOD_ID + ":got_rusty_metal_ore");
         AdvancementEntry got_dirty_crystal = Advancement.Builder.create()
                 .parent(EnterTheWorld)
                 .display(
                         ModBlocks.CLEAN_CRYSTAL_ORE,
                         Text.literal("На пути"),
-                        Text.literal("Добыть грязный кристалл из руды"),
+                        Text.literal("Найти в палатке грязный кристалл"),
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -106,7 +111,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("recycle_dirty_crystal",InventoryChangedCriterion.Conditions.items(ModItems.POLISHED_METAL))
                 .build(consumer, Rusted.MOD_ID + ":recycle_rusty_metal");
         AdvancementEntry got_clean_instruments = Advancement.Builder.create()
-                .parent(EnterTheWorld)
+                .parent(recycle_rusty_metal)
                 .display(
                         ModItems.CLEAN_CRYSTAL_SWORD,
                         Text.literal("Лучшее средство"),
@@ -123,7 +128,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("got_clean_sword",InventoryChangedCriterion.Conditions.items(ModItems.CLEAN_CRYSTAL_SWORD))
                 .build(consumer, Rusted.MOD_ID + ":got_clean_instruments");
         AdvancementEntry got_clean_armor = Advancement.Builder.create()
-                .parent(EnterTheWorld)
+                .parent(recycle_dirty_crystal)
                 .display(
                         ModItems.CLEAN_CRYSTAL_CHESTPLATE,
                         Text.literal("Надёжная защита"),
@@ -139,5 +144,19 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("got_clean_leggings",InventoryChangedCriterion.Conditions.items(ModItems.CLEAN_CRYSTAL_LEGGINGS))
                 .criterion("got_clean_helmet",InventoryChangedCriterion.Conditions.items(ModItems.CLEAN_CRYSTAL_HELMET))
                 .build(consumer, Rusted.MOD_ID + ":got_clean_armor");
+        AdvancementEntry got_into_dimension = Advancement.Builder.create()
+                .parent(EnterTheWorld)
+                .display(
+                        ModBlocks.RUSTED_DIRT,
+                        Text.literal("Что это?"),
+                        Text.literal("???"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_into_dimension",ChangedDimensionCriterion.Conditions.to(RUSTY_DEADLANDS_KEY))
+                .build(consumer, Rusted.MOD_ID + ":got_into_dimension");
     }
 }

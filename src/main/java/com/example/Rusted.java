@@ -11,6 +11,8 @@ import com.example.world.biome.ModBiomes;
 import com.example.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class    Rusted implements ModInitializer {
@@ -24,6 +26,13 @@ public class    Rusted implements ModInitializer {
         ModItemsGroups.registerItemGroups();
         ModEntities.registerModEntities();
         FabricDefaultAttributeRegistry.register(ModEntities.RUST_ZOMBIE, RustZombieEntity.createAttributes());
+        CustomPortalBuilder.beginPortal()
+                .frameBlock(ModBlocks.RUSTED_DIRT)
+                .lightWithItem(ModItems.CLEAN_CRYSTAL)
+                .destDimID(Identifier.of(Rusted.MOD_ID,"rusty_deadlands"))
+                .tintColor(0xc76efa)
+                .registerPortal();
 	}
+
 }
 
