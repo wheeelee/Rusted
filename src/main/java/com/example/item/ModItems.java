@@ -45,7 +45,18 @@ public class ModItems {
     public static final Item RUSTY_METAL_BOOTS = registerItem( "rusty_metal_boots",
             new ArmorItem(ModArmorMaterials.RUSTY_METAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(3))));
-
+    public static final Item CLEAN_CRYSTAL_HELMET = registerItem("clean_crystal_helmet",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+    public static final Item CLEAN_CRYSTAL_CHESTPLATE = registerItem("clean_crystal_chestplate",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+    public static final Item CLEAN_CRYSTAL_LEGGINGS = registerItem("clean_crystal_leggings",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+    public static final Item CLEAN_CRYSTAL_BOOTS = registerItem("clean_crystal_boots",
+            new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
     public static final Item RUST_ZOMBIE_SPAWN_EGG = registerItem("rust_zombie_spawn_egg",
             new SpawnEggItem(ModEntities.RUST_ZOMBIE, 0x9dc783, 0xbfaf5f, new Item.Settings()));
 
