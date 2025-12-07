@@ -17,9 +17,11 @@
   "item.rusted.clean_crystal_shovel": "Clean Crystal Shovel",
   "item.rusted.clean_crystal_axe": "Clean Crystal Axe",
   "item.rusted.rust_zombie_spawn_egg": "Rust Zombie Spawn Egg",
+  "item.rusted.rusty_robot_spawn_egg": "Rusty Robot Spawn Egg",
   "item.rusted.clean_crystal_helmet": "Clean Crystal Helmet",
   "item.rusted.clean_crystal_chestplate": "Clean Crystal Chestplate",
   "item.rusted.clean_crystal_leggings": "Clean Crystal Leggings",
   "item.rusted.clean_crystal_boots": "Clean Crystal Boots",
-  "entity.rusted.rust_zombie": "Rust Zombie"
+  "entity.rusted.rust_zombie": "Rust Zombie",
+  "entity.rusted.rusty_robot": "Rusty Robot"
 }

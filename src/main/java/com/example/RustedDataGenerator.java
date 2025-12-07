@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.entity.ModEntities;
 import com.example.rusted.datagen.*;
 import com.example.world.biome.ModBiomes;
 import com.example.world.dimension.ModDimensions;
@@ -31,6 +32,6 @@ public class RustedDataGenerator implements DataGeneratorEntrypoint {
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
-//        fghfh
+
     }
 }

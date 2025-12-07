@@ -1,6 +1,5 @@
 {
   "item.rusted.clean_crystal": "Чистый кристалл",
-  "itemGroup.rusted.group": "Rusted",
   "item.rusted.dirty_crystal": "Мутный кристалл",
   "item.rusted.rusty_metal": "Окислившийся металл",
   "item.rusted.rusty_metal_helmet": "Ржавый шлем",
@@ -21,5 +20,8 @@
   "item.rusted.clean_crystal_leggings": "Чистые кристальные штаны",
   "item.rusted.clean_crystal_boots": "Чистая кристальная обувь",
   "item.rusted.rust_zombie_spawn_egg": "Яйцо призыва проржавевшего зомби",
-  "entity.rusted.rust_zombie": "Проржавевший зомби"
+  "item.rusted.rusty_robot_spawn_egg": "Яйцо призыва проржавевшего робота",
+  "entity.rusted.rust_zombie": "Проржавевший зомби",
+  "entity.rusted.rusty_robot": "Прожавевший робот",
+  "itemGroup.rusted": "Rusted"
 }

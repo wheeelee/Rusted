@@ -59,7 +59,8 @@ public class ModItems {
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
     public static final Item RUST_ZOMBIE_SPAWN_EGG = registerItem("rust_zombie_spawn_egg",
             new SpawnEggItem(ModEntities.RUST_ZOMBIE, 0x9dc783, 0xbfaf5f, new Item.Settings()));
-
+    public static final Item RUSTY_ROBOT_SPAWN_EGG = registerItem("rusty_robot_spawn_egg",
+            new SpawnEggItem(ModEntities.RUSTY_ROBOT,0xE4BB97,0x584B53,new Item.Settings()));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Rusted.MOD_ID, name), item);
     }

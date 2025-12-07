@@ -45,5 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.CLEAN_CRYSTAL_BOOTS));
         itemModelGenerator.register(ModItems.RUST_ZOMBIE_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.RUSTY_ROBOT_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
     }
 }
