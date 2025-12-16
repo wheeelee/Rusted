@@ -61,6 +61,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.RUST_ZOMBIE, 0x9dc783, 0xbfaf5f, new Item.Settings()));
     public static final Item RUSTY_ROBOT_SPAWN_EGG = registerItem("rusty_robot_spawn_egg",
             new SpawnEggItem(ModEntities.RUSTY_ROBOT,0xE4BB97,0x584B53,new Item.Settings()));
+    public static final Item RUST_HOUND_SPAWN_EGG = registerItem("rust_hound_spawn_egg",
+            new SpawnEggItem(ModEntities.RUST_HOUND,0x42434c,0xc58316,new Item.Settings()));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Rusted.MOD_ID, name), item);
     }

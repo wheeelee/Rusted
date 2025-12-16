@@ -3,7 +3,6 @@ package com.example.item;
 import com.example.Rusted;
 import com.example.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -42,6 +41,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.CLEAN_CRYSTAL_BOOTS);
                         entries.add(ModItems.RUST_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.RUSTY_ROBOT_SPAWN_EGG);
+                        entries.add(ModItems.RUST_HOUND_SPAWN_EGG);
                         // entries.add(ModItems.RUSTED_INGOT);
                     })
                     .build());

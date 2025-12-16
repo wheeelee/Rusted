@@ -21,7 +21,9 @@
   "item.rusted.clean_crystal_boots": "Чистая кристальная обувь",
   "item.rusted.rust_zombie_spawn_egg": "Яйцо призыва проржавевшего зомби",
   "item.rusted.rusty_robot_spawn_egg": "Яйцо призыва проржавевшего робота",
+  "item.rusted.rust_hound_spawn_egg": "Яйцо призыва проржавевшей собаки",
   "entity.rusted.rust_zombie": "Проржавевший зомби",
-  "entity.rusted.rusty_robot": "Прожавевший робот",
+  "entity.rusted.rusty_robot": "Проржавевший робот",
+  "entity.rusted.rust_hound": "Проржавевшая собака",
   "itemGroup.rusted": "Rusted"
 }

@@ -2,6 +2,7 @@
 
     import com.example.block.ModBlocks;
     import com.example.entity.ModEntities;
+    import com.example.entity.custom.RustHoundEntity;
     import com.example.entity.custom.RustZombieEntity;
     import com.example.entity.custom.RustyRobotEntity;
     import com.example.item.ModItems;
@@ -24,6 +25,7 @@
             ModItemsGroups.registerItemGroups();
             FabricDefaultAttributeRegistry.register(ModEntities.RUST_ZOMBIE, RustZombieEntity.createAttributes());
             FabricDefaultAttributeRegistry.register(ModEntities.RUSTY_ROBOT, RustyRobotEntity.createAttributes());
+            FabricDefaultAttributeRegistry.register(ModEntities.RUST_HOUND, RustHoundEntity.createAttributes());
             CustomPortalBuilder.beginPortal()
                     .frameBlock(ModBlocks.RUSTED_DIRT)
                     .lightWithItem(ModItems.CLEAN_CRYSTAL)
