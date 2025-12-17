@@ -1,6 +1,7 @@
     package com.example;
 
     import com.example.block.ModBlocks;
+    import com.example.effect.ModEffects;
     import com.example.entity.ModEntities;
     import com.example.entity.custom.RustZombieEntity;
     import com.example.entity.custom.RustyRobotEntity;
@@ -21,6 +22,7 @@
             ModEntities.registerModEntities();
             ModItems.registerModItems();
             ModBlocks.registerModBlocks();
+            ModEffects.registerEffects();
             ModItemsGroups.registerItemGroups();
             FabricDefaultAttributeRegistry.register(ModEntities.RUST_ZOMBIE, RustZombieEntity.createAttributes());
             FabricDefaultAttributeRegistry.register(ModEntities.RUSTY_ROBOT, RustyRobotEntity.createAttributes());

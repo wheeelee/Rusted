@@ -1,4 +1,4 @@
-// 1.21	2025-12-07T18:32:12.5835926	Rusted/Model Definitions
+// 1.21	2025-12-17T16:58:41.3603481	Rusted/Model Definitions
 a7da24191cb8f602964fc267b261367c06712639 assets\rusted\models\item\rusty_metal.json
 4eed882f5596c4ddefd83c94904cdc73014b9ba5 assets\rusted\models\item\rusty_metal_ore.json
 6274056ef536c95f69e4cedfc01ef5db2dd143b6 assets\rusted\blockstates\clean_crystal_deepslate_ore.json
@@ -47,8 +47,8 @@ ee9246eae876253324c943838ea2ca5712e7ceea assets\rusted\models\block\clean_crysta
 ad7abd6a64331ffbd0bb26023010c298ce7225fa assets\rusted\models\item\clean_crystal_leggings_iron_trim.json
 b48f7f3b67a4f8448f133364b6926cb388547cbd assets\rusted\models\item\clean_crystal_ore.json
 87bebb3a0f6e7b090de6c276ff0af72dc0c8a812 assets\rusted\models\item\clean_crystal_leggings_amethyst_trim.json
-a8ce03b5212c04ec9f2ba103443c134c007706e4 assets\rusted\models\item\dirty_crystal.json
 b11bf1909b44719c9b76616214ebc1e7043a2e11 assets\rusted\models\item\clean_crystal_chestplate_iron_trim.json
+a8ce03b5212c04ec9f2ba103443c134c007706e4 assets\rusted\models\item\dirty_crystal.json
 bc9c9cb65df585b3fb860606f0d2350cca6d63b2 assets\rusted\models\item\clean_crystal_helmet_emerald_trim.json
 5a4bfdaa08a75f5acc85248173244f5fa723c975 assets\rusted\models\item\clean_crystal_block.json
 7837ca2c9ad41be0a61986d38b9fb8075397bf76 assets\rusted\models\item\clean_crystal_deepslate_ore.json
@@ -57,8 +57,8 @@ bc9c9cb65df585b3fb860606f0d2350cca6d63b2 assets\rusted\models\item\clean_crystal
 a6e12a717a52a9338e53378e3125978566e60015 assets\rusted\models\item\clean_crystal_helmet_redstone_trim.json
 009678709566112cdc47dd2f1a3465002d6b623f assets\rusted\models\item\clean_crystal_chestplate_lapis_trim.json
 d2fcaaa89ce30ababc8d6b0bbeed18631dedd593 assets\rusted\models\item\clean_crystal_chestplate_emerald_trim.json
-55c37795479b6d1cc176abb4a25b280498cf7ebf assets\rusted\models\item\clean_crystal_boots.json
 6068ca8a380e4941d9fbff718b7f69e57d8920a6 assets\rusted\models\item\clean_crystal_boots_emerald_trim.json
+55c37795479b6d1cc176abb4a25b280498cf7ebf assets\rusted\models\item\clean_crystal_boots.json
 274871e87bfb8d6a862ea40d3472d5a53d685283 assets\rusted\models\item\clean_crystal_helmet_quartz_trim.json
 d4f37fdbb45c31eec1fd78e8c896d4eb372177e4 assets\rusted\models\item\clean_crystal_chestplate_netherite_trim.json
 301bd635a3ad29090f3d0dd423629c75e200f655 assets\rusted\models\item\clean_crystal_chestplate.json

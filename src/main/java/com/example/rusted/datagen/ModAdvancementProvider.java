@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
@@ -51,7 +52,10 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         true, // Announce it to chat
                         false // Hide it in the advancement tab until it's achieved
                 )
-                .criterion("enter_the_world", TickCriterion.Conditions.createTick())
+                .rewards(AdvancementRewards.Builder.loot(
+                        RegistryKey.of(RegistryKeys.LOOT_TABLE,
+                                Identifier.of(Rusted.MOD_ID, "advancements/enter_the_world"))
+                ))                .criterion("enter_the_world", TickCriterion.Conditions.createTick())
                 // Give the advancement an id
                 .build(consumer,Rusted.MOD_ID + ":enter_the_world");
         AdvancementEntry got_rusty_metal = Advancement.Builder.create()
