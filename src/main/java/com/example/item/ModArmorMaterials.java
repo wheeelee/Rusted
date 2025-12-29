@@ -26,7 +26,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.CHESTPLATE, 4);
                 map.put(ArmorItem.Type.HELMET, 2);
                 map.put(ArmorItem.Type.BODY, 4);
-            }), 20,SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.RUSTY_METAL),
+            }), 20,SoundEvents.ITEM_ARMOR_EQUIP_IRON, () -> Ingredient.ofItems(ModItems.RUSTY_METAL),
                     List.of(new ArmorMaterial.Layer(Identifier.of(Rusted.MOD_ID, "rusty_metal"))), 0, 0));
     public static final RegistryEntry<ArmorMaterial> CLEAN_CRYSTAL_ARMOR_MATERIAL = registerArmorMaterial("clean_crystal",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {

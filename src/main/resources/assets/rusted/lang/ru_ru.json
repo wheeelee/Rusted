@@ -24,5 +24,6 @@
   "item.rusted.rusty_robot_spawn_egg": "Яйцо призыва проржавевшего робота",
   "entity.rusted.rust_zombie": "Проржавевший зомби",
   "entity.rusted.rusty_robot": "Прожавевший робот",
+  "effect.rusted.rusty": "Ржавый разум",
   "itemGroup.rusted": "Rusted"
 }

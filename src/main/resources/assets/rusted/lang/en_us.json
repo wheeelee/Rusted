@@ -24,5 +24,6 @@
   "item.rusted.clean_crystal_leggings": "Clean Crystal Leggings",
   "item.rusted.clean_crystal_boots": "Clean Crystal Boots",
   "entity.rusted.rust_zombie": "Rust Zombie",
-  "entity.rusted.rusty_robot": "Rusty Robot"
+  "entity.rusted.rusty_robot": "Rusty Robot",
+  "effect.rusted.rusty": "Rusty Mind"
 }

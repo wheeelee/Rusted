@@ -30,6 +30,10 @@ public class ModItemTagProvider  extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CLEAN_CRYSTAL_HELMET)
                 .add(ModItems.CLEAN_CRYSTAL_CHESTPLATE)
                 .add(ModItems.CLEAN_CRYSTAL_LEGGINGS)
-                .add(ModItems.CLEAN_CRYSTAL_BOOTS);
+                .add(ModItems.CLEAN_CRYSTAL_BOOTS)
+                .add(ModItems.RUSTY_METAL_HELMET)
+                .add(ModItems.RUSTY_METAL_LEGGINGS)
+                .add(ModItems.RUSTY_METAL_CHESTPLATE)
+                .add(ModItems.RUSTY_METAL_BOOTS);
     }
 }
