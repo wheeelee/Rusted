@@ -45,6 +45,7 @@ public class ModItems {
     public static final Item RUSTY_METAL_BOOTS = registerItem( "rusty_metal_boots",
             new ArmorItem(ModArmorMaterials.RUSTY_METAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(3))));
+
     public static final Item CLEAN_CRYSTAL_HELMET = registerItem("clean_crystal_helmet",
             new ArmorItem(ModArmorMaterials.CLEAN_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));

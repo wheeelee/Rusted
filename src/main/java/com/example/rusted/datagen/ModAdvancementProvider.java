@@ -5,23 +5,23 @@ import com.example.RustedDataGenerator;
 import com.example.block.ModBlocks;
 import com.example.effect.ModEffects;
 import com.example.effect.RustyEffect;
+import com.example.entity.ModEntities;
 import com.example.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
-import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementEntry;
-import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.*;
 import net.minecraft.advancement.criterion.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.predicate.entity.EntityEffectPredicate;
-import net.minecraft.predicate.entity.EntityPredicate;
-import net.minecraft.predicate.entity.LootContextPredicate;
+import net.minecraft.predicate.DamagePredicate;
+import net.minecraft.predicate.entity.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.ModStatus;
@@ -51,7 +51,10 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         true, // Announce it to chat
                         false // Hide it in the advancement tab until it's achieved
                 )
-                .criterion("enter_the_world", TickCriterion.Conditions.createTick())
+                .rewards(AdvancementRewards.Builder.loot(
+                        RegistryKey.of(RegistryKeys.LOOT_TABLE,
+                                Identifier.of(Rusted.MOD_ID, "advancements/enter_the_world"))
+                ))                .criterion("enter_the_world", TickCriterion.Conditions.createTick())
                 // Give the advancement an id
                 .build(consumer,Rusted.MOD_ID + ":enter_the_world");
         AdvancementEntry got_rusty_metal = Advancement.Builder.create()

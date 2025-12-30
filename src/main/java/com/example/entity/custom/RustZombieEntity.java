@@ -1,19 +1,22 @@
 package com.example.entity.custom;
 
-import com.example.entity.ModEntities;
-import com.example.item.ModItems;
+import com.example.effect.ModEffects; // ← Импорт твоего эффекта
 import net.minecraft.entity.AnimationState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -30,14 +33,12 @@ public class RustZombieEntity extends ZombieEntity {
 
     @Override
     protected void initGoals() {
-        // Цели атаки
         this.goalSelector.add(2, new ZombieAttackGoal(this, 1.0, false));
         this.goalSelector.add(6, new MoveThroughVillageGoal(this, 1.0, true, 4, this::canBreakDoors));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
 
-        // Цели выбора цели
         this.targetSelector.add(1, new RevengeGoal(this, ZombifiedPiglinEntity.class));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
@@ -79,12 +80,12 @@ public class RustZombieEntity extends ZombieEntity {
 
     @Override
     protected boolean canConvertInWater() {
-        return false; // Предотвращает превращение в утопленника
+        return false;
     }
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_ZOMBIE_AMBIENT; // Используем звуки зомби вместо зоглина
+        return SoundEvents.ENTITY_ZOMBIE_AMBIENT;
     }
 
     @Override
@@ -100,5 +101,31 @@ public class RustZombieEntity extends ZombieEntity {
     @Override
     protected SoundEvent getStepSound() {
         return SoundEvents.ENTITY_ZOMBIE_STEP;
+    }
+
+    @Override
+    protected boolean isAffectedByDaylight() {
+        return false;
+    }
+
+    @Override
+    public boolean tryAttack(Entity target) {
+        boolean success = super.tryAttack(target);
+
+        if (success && target instanceof LivingEntity livingTarget) {
+            int duration = 200;
+            int amplifier = 0;
+
+            livingTarget.addStatusEffect(new StatusEffectInstance(
+                    Registries.STATUS_EFFECT.getEntry(ModEffects.RUSTY),
+                    duration,
+                    amplifier,
+                    false,  // ambient
+                    true,   // showParticles
+                    true    // showIcon
+            ));
+        }
+
+        return success;
     }
 }

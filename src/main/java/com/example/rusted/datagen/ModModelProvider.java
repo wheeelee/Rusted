@@ -43,6 +43,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.CLEAN_CRYSTAL_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.CLEAN_CRYSTAL_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.CLEAN_CRYSTAL_BOOTS));
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUSTY_METAL_BOOTS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUSTY_METAL_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUSTY_METAL_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUSTY_METAL_CHESTPLATE));
+
         itemModelGenerator.register(ModItems.RUST_ZOMBIE_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.RUSTY_ROBOT_SPAWN_EGG,

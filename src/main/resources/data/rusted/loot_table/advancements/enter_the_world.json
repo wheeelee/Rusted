@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:written_book_content": {
+                  "title": "Начало пути",
+                  "author": "Rusted",
+                  "pages": [
+                    {
+                      "raw": "{\"text\":\"Надеюсь, ты откроешь эту книгу, пока не слишком поздно.\\nВесь мир был охвачен Ржавчиной, которая не учичтожается обычными методами, а инструменты быстро изнашиваются и приходят в негодность\"}"
+                    },
+                    {
+                      "raw": "{\"text\":\"Люди, вернувшиеся оттуда сооружали палатки,чтобы отойти от ужаса, но быстро умирали... \\n\"}"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

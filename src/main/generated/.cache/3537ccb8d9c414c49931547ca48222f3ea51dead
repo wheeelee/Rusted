@@ -1,4 +1,4 @@
-// 1.21	2025-12-07T18:32:12.5886855	Rusted/Tags for minecraft:block
+// 1.21	2025-12-29T13:40:33.0656207	Rusted/Tags for minecraft:block
 fbba1d7e9de06733be3762741ea9e64dfe6a4cdf data\minecraft\tags\block\mineable\pickaxe.json
 0ebf1cf719121ecf35915510df4ee30f36b46172 data\minecraft\tags\block\needs_stone_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data\rusted\tags\block\needs_clean_crystal_tool.json
