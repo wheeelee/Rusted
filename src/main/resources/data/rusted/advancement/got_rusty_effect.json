@@ -1,0 +1,29 @@
+{
+  "parent": "rusted:got_into_dimension",
+  "criteria": {
+    "got_rust_effect": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "rusted:rusty": {}
+        }
+      }
+    }
+  },
+  "display": {
+    "title": "Какая мерзость",
+    "description": "Вы начали разлагаться...",
+    "icon": {
+      "id": "minecraft:dead_bush",
+      "count": 1
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["got_rust_effect"]
+  ],
+  "sends_telemetry_event": true
+}
