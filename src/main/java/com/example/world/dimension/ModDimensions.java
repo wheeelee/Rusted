@@ -24,20 +24,20 @@ public class ModDimensions {
 
     public static void bootstrapType(Registerable<DimensionType> context) {
         context.register(RUSTED_DIM_TYPE, new DimensionType(
-                OptionalLong.of(12000), // fixedTime
-                false, // hasSkylight
+                OptionalLong.empty(), // fixedTime
+                true, // hasSkylight
                 false, // hasCeiling
                 false, // ultraWarm
                 true, // natural
                 1.0, // coordinateScale
                 true, // bedWorks
                 false, // respawnAnchorWorks
-                0, // minY
-                256, // height
-                256, // logicalHeight
+                -64, // minY
+                384, // height
+                384, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
-                1.0f, // ambientLight
-                new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 0), 0)));
+                0.0f, // ambientLight
+                new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 7), 0)));
     }
 }

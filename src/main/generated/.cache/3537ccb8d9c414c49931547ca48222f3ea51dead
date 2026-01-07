@@ -1,7 +1,7 @@
-// 1.21	2026-01-07T12:55:50.6220264	Rusted/Tags for minecraft:block
+// 1.21	2026-01-07T14:38:47.4299741	Rusted/Tags for minecraft:block
 fbba1d7e9de06733be3762741ea9e64dfe6a4cdf data\minecraft\tags\block\mineable\pickaxe.json
 0ebf1cf719121ecf35915510df4ee30f36b46172 data\minecraft\tags\block\needs_stone_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data\rusted\tags\block\needs_clean_crystal_tool.json
-63ceeef6169899429d7eb92607b06030770db936 data\minecraft\tags\block\needs_diamond_tool.json
 2655b424e2dcb48ff446199e9b71af4613987e36 data\minecraft\tags\block\needs_iron_tool.json
+63ceeef6169899429d7eb92607b06030770db936 data\minecraft\tags\block\needs_diamond_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\rusted\tags\block\incorrect_for_clean_crystal_tool.json

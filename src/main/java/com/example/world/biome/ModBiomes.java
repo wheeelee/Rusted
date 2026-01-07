@@ -1,6 +1,7 @@
 package com.example.world.biome;
 
 import com.example.Rusted;
+import com.example.world.ModPlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -55,6 +56,15 @@ public class ModBiomes {
 
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+        biomeBuilder.feature(
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.CLEAN_CRYSTAL_ORE_PLACED_KEY
+        );
+
+        biomeBuilder.feature(
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.RUSTY_METAL_ORE_PLACED_KEY
+        );
 
         return new Biome.Builder()
                 .precipitation(true)

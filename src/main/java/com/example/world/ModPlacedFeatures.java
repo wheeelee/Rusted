@@ -25,10 +25,10 @@ public class ModPlacedFeatures {
 
         register(context, CLEAN_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CLEAN_CRYSTAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(9,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-32), YOffset.fixed(80))));
         register(context, RUSTY_METAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUSTY_METAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(9,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-32), YOffset.fixed(80))));
     }
 
     public static RegistryKey<PlacedFeature> registryKey(String name) {
