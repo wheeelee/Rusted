@@ -1,5 +1,7 @@
 package com.example.entity.custom;
 
+import com.example.item.ModItems;
+import com.example.sound.ModSounds;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -9,15 +11,18 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -117,33 +122,50 @@ public class RustyRobotEntity extends AnimalEntity {
         super.mobTick();
         this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
     }
+    @Override
+    protected void dropLoot(DamageSource source, boolean causedByPlayer) {
+        super.dropLoot(source, causedByPlayer);
 
-    // ==============================================
-    // МЕТОД АТАКИ С НАЛОЖЕНИЕМ КАСТОМНОГО ЭФФЕКТА
-    // ==============================================
+        if (!this.getWorld().isClient) {
+            this.dropItem(ModItems.RUSTY_METAL, this.random.nextInt(3) + 1);
+
+            if (this.isRaging()) {
+                this.dropItem(Items.REDSTONE);
+            }
+        }
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.RUSTY_ROBOT_DEATH;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSounds.RUSTY_ROBOT_HIT;
+   }
+
     @Override
     public boolean tryAttack(Entity target) {
-        // Наносим стандартный урон (используется атрибут GENERIC_ATTACK_DAMAGE)
+
         boolean success = super.tryAttack(target);
 
         if (success && target instanceof LivingEntity livingTarget) {
-            int duration = 200;   // 10 секунд по умолчанию
-            int amplifier = 0;    // уровень 1
+            int duration = 200;
+            int amplifier = 0;
 
-            // В режиме ярости — эффект дольше и сильнее
             if (this.isRaging()) {
                 duration = 400;   // 20 секунд
                 amplifier = 1;    // уровень 2
             }
 
-            // Ключевой момент: используем .builtInRegistryHolder() для совместимости
             livingTarget.addStatusEffect(new StatusEffectInstance(
                     Registries.STATUS_EFFECT.getEntry(ModEffects.RUSTY),
                     duration,
                     amplifier,
-                    false,  // ambient — слабые частицы (как от маяка)
-                    true,   // showParticles — показывать частицы эффекта
-                    true    // showIcon — показывать иконку в инвентаре/HUD
+                    false,
+                    true,
+                    true
             ));
         }
 

@@ -23,7 +23,7 @@ public class ModBiomes {
             Identifier.of(Rusted.MOD_ID, "rusty_deadlands"));
 
     public static void bootstrap(Registerable<Biome> context) {
-        context.register(RUSTY_DEADLANDS,rustydeadlands(context));
+        context.register(RUSTY_DEADLANDS, rustydeadlands(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {

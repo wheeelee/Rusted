@@ -1,0 +1,20 @@
+{
+  "achievements_gain": {
+    "subtitle": "sound.rusted.achievements_gain",
+    "sounds": [
+      "rusted:achievements_gain"
+    ]
+  },
+  "rusty_robot_death": {
+    "subtitle": "sound.rusted.rusty_robot_death",
+    "sounds": [
+      "rusted:rusty_robot_death"
+    ]
+  },
+  "rusty_robot_hit": {
+    "subtitle": "sound.rusted.rusty_robot_hit",
+    "sounds": [
+      "rusted:rusty_robot_hit"
+    ]
+  }
+}

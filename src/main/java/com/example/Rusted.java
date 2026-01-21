@@ -7,7 +7,7 @@
     import com.example.entity.custom.RustyRobotEntity;
     import com.example.item.ModItems;
     import com.example.item.ModItemsGroups;
-    import com.example.world.gen.ModWorldGeneration;
+    import com.example.sound.ModSounds;
     import net.fabricmc.api.ModInitializer;
     import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
     import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -25,7 +25,7 @@
             ModBlocks.registerModBlocks();
             ModEffects.registerEffects();
             ModItemsGroups.registerItemGroups();
-            //ModWorldGeneration.generateModWorldGen();
+            ModSounds.initialize();
             FabricDefaultAttributeRegistry.register(ModEntities.RUST_ZOMBIE, RustZombieEntity.createAttributes());
             FabricDefaultAttributeRegistry.register(ModEntities.RUSTY_ROBOT, RustyRobotEntity.createAttributes());
             CustomPortalBuilder.beginPortal()
