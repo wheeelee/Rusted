@@ -5,11 +5,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
-public class CustomSounds {
-    private CustomSounds() {
+public class ModSounds {
+    private ModSounds() {
     }
 
-    public static final SoundEvent CHALLENGE_COMPLETED = registerSound("challenge_bass");
+    public static final SoundEvent ACHIEVEMENTS_GAIN =
+            registerSound("achievements_gain");
+    public static final SoundEvent RUSTY_ROBOT_DEATH =
+            registerSound("rusty_robot_death");
+    public static final SoundEvent RUSTY_ROBOT_HIT =
+            registerSound("rusty_robot_hit");
+
 
     private static SoundEvent registerSound(String id) {
         Identifier identifier = Identifier.of(Rusted.MOD_ID, id);

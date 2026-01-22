@@ -42,6 +42,9 @@ public class ModItemsGroups {
                         entries.add(ModItems.CLEAN_CRYSTAL_BOOTS);
                         entries.add(ModItems.RUST_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.RUSTY_ROBOT_SPAWN_EGG);
+                        entries.add(ModItems.RUST_OOZE_KING_SPAWN_EGG);
+                        entries.add(ModItems.MONSTER_TREAT);
+                        entries.add(ModItems.RUST_HOUND_SPAWN_EGG);
                         // entries.add(ModItems.RUSTED_INGOT);
                     })
                     .build());

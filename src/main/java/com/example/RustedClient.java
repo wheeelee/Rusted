@@ -17,5 +17,9 @@ public class RustedClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.RUST_ZOMBIE, RustZombieRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(RustyRobotModel.RUSTY_ROBOT,RustyRobotModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.RUSTY_ROBOT,RustyRobotRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(RustOozeKingModel.RUST_OOZE_KING,RustOozeKingModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.RUST_OOZE_KING,RustOozeKingRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(RustHoundModel.RUST_HOUND,RustHoundModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.RUST_HOUND,RustHoundRenderer::new);
     }
 }

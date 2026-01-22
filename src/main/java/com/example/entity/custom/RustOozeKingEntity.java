@@ -1,7 +1,6 @@
 package com.example.entity.custom;
 
-import com.example.ModSounds;
-import com.example.item.ModItems;
+import com.example.effect.ModEffects;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -18,93 +17,29 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-// Импорт твоего кастомного эффекта
-import com.example.effect.ModEffects;
-
-public class RustyRobotEntity extends AnimalEntity {
+public class RustOozeKingEntity extends AnimalEntity {
 
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState rageAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public RustyRobotEntity(EntityType<? extends AnimalEntity> entityType, World world) {
+    public RustOozeKingEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
     }
-
     private final ServerBossBar bossBar = new ServerBossBar(
-            Text.literal("Rusty Robot"),
+            Text.literal("Rust Ooze King"),
             BossBar.Color.BLUE,
             BossBar.Style.NOTCHED_10
     );
-
-    @Override
-    protected void initGoals() {
-        this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(2, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
-        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
-        this.goalSelector.add(5, new LookAroundGoal(this));
-        this.goalSelector.add(6, new MeleeAttackGoal(this, 1.2D, true));
-
-        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-    }
-
-    public static DefaultAttributeContainer.Builder createAttributes() {
-        return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3.0)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20.0);
-    }
-
-    private void setupAnimationStates() {
-        if (this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 40;
-            this.idleAnimationState.start(this.age);
-        } else {
-            --this.idleAnimationTimeout;
-        }
-    }
-
-    private boolean raging = false;
-
-    public boolean isRaging() {
-        return raging;
-    }
-
-    public void setRaging(boolean raging) {
-        this.raging = raging;
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-
-        if (this.getWorld().isClient()) {
-            this.setupAnimationStates();
-        }
-    }
-
-    @Override
-    public boolean isBreedingItem(ItemStack stack) {
-        return false;//ModItems.MONSTER_TREAT;
-    }
-
-    @Override
-    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
-    }
-
     @Override
     public void onStartedTrackingBy(ServerPlayerEntity player) {
         super.onStartedTrackingBy(player);
@@ -123,28 +58,75 @@ public class RustyRobotEntity extends AnimalEntity {
         this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
     }
     @Override
-    protected void dropLoot(DamageSource source, boolean causedByPlayer) {
-        super.dropLoot(source, causedByPlayer);
+    protected void initGoals() {
+        // Движение и базовое поведение
+        this.goalSelector.add(0, new SwimGoal(this));
+        this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D));
+        this.goalSelector.add(2, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
+        this.goalSelector.add(5, new LookAroundGoal(this));
+        this.goalSelector.add(3, new MeleeAttackGoal(this, 1.2D, true)); // атака в ближнем бою
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true)); // атакует игрока
+    }
 
-        if (!this.getWorld().isClient) {
-            this.dropItem(ModItems.MONSTER_TREAT, this.random.nextInt(3) + 1);
+    public static DefaultAttributeContainer.Builder createAttributes() {
+        return MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH,70)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.1)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE,10)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE,20);
+    }
 
-            if (this.isRaging()) {
-                this.dropItem(Items.REDSTONE);
-            }
+    private void setupAnimationStates() {
+        if (this.idleAnimationTimeout <= 0) {
+            this.idleAnimationTimeout = 40;
+            this.idleAnimationState.start(this.age);
+        } else {
+            --this.idleAnimationTimeout;
+        }
+    }
+    private boolean raging = false; // по умолчанию нет ярости
+
+    public boolean isRaging() {
+        return raging;
+    }
+
+    public void setRaging(boolean raging) {
+        this.raging = raging;
+    }
+    @Override
+    public void tick() {
+        super.tick();
+
+        if (this.getWorld().isClient()) {
+            this.setupAnimationStates();
         }
     }
 
     @Override
-    protected SoundEvent getDeathSound() {
-        return ModSounds.RUSTY_ROBOT_DEATH;
+    public boolean isBreedingItem(ItemStack stack) {
+        return false;
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return ModSounds.RUSTY_ROBOT_HIT;
+    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+        return null;
     }
 
+    protected SoundEvent getStepSound() {
+        return SoundEvents.ENTITY_IRON_GOLEM_STEP;
+    }
+
+    @Override
+    protected @Nullable SoundEvent getHurtSound(DamageSource source) {
+        return SoundEvents.ENTITY_IRON_GOLEM_HURT;
+    }
+
+    @Override
+    protected @Nullable SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_IRON_GOLEM_DEATH;
+    }
     @Override
     public boolean tryAttack(Entity target) {
 

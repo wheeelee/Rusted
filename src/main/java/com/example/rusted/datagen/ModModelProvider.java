@@ -32,6 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.DIRTY_CRYSTAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUSTY_METAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONSTER_TREAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLEAN_CRYSTAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.POLISHED_METAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLEAN_CRYSTAL_PICKAXE,Models.HANDHELD);
@@ -52,6 +53,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUST_ZOMBIE_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.RUSTY_ROBOT_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
+        itemModelGenerator.register(ModItems.RUST_OOZE_KING_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
+        itemModelGenerator.register(ModItems.RUST_HOUND_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
     }
 }

@@ -27,12 +27,9 @@ public class ModLootTableProvider  extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.CLEAN_CRYSTAL_BLOCK);
-        //ЭТО ИЗ БЛОКА БУДЕТ ВЫПАДАТЬ БЛОК И ВСЁ
-
         addDrop(ModBlocks.CLEAN_CRYSTAL_ORE,multipleOreDrops(ModBlocks.CLEAN_CRYSTAL_ORE,ModItems.DIRTY_CRYSTAL,1,3));
         addDrop(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE,multipleOreDrops(ModBlocks.CLEAN_CRYSTAL_DEEPSLATE_ORE,ModItems.DIRTY_CRYSTAL,1,3));
         addDrop(ModBlocks.RUSTY_METAL_ORE,multipleOreDrops(ModBlocks.RUSTY_METAL_ORE,ModItems.DIRTY_CRYSTAL,1,3));
-        //Более удобное добавление свойств для блоков - выпадения и количество выпадаемых ресурсов
     }
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);

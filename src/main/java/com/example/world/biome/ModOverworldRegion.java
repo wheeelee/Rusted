@@ -20,8 +20,8 @@ public class ModOverworldRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube,
             RegistryKey<Biome>>> mapper) {
-        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.OCEAN, ModBiomes.RUSTY_DEADLANDS);
-        });
+//        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+//            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.OCEAN, ModBiomes.RUSTY_DEADLANDS);
+//        });
     }
 }
