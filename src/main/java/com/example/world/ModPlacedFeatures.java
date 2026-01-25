@@ -20,6 +20,13 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> CLEAN_CRYSTAL_ORE_PLACED_KEY = registryKey("clean_crystal_ore_placed");
     public static final RegistryKey<PlacedFeature> RUSTY_METAL_ORE_PLACED_KEY = registryKey("rusty_metal_ore_placed");
+    /**
+     * Основной метод регистрации всех размещённых фич.
+     * Здесь мы связываем конфигурированные фичи с PlacementModifiers,
+     * чтобы контролировать частоту появления, высоту и биомы.
+     *
+     * @param context объект контекста для регистрации PlacedFeature
+     */
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -30,7 +37,12 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(9,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-32), YOffset.fixed(80))));
     }
-
+    /**
+     * Вспомогательный метод для создания уникального ключа PlacedFeature.
+     *
+     * @param name название фичи
+     * @return RegistryKey для PlacedFeature
+     */
     public static RegistryKey<PlacedFeature> registryKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(Rusted.MOD_ID, name));
     }
@@ -43,6 +55,15 @@ public class ModPlacedFeatures {
     public static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
                                                                                   RegistryEntry<ConfiguredFeature<?,?>> configuraion,
                                                                                   PlacementModifier... modifiers) {
+        /**
+         * Перегрузка метода register для удобства использования.
+         *
+         * @param context объект контекста для регистрации PlacedFeature
+         * @param key уникальный ключ PlacedFeature
+         * @param configuration ссылка на конфигурированную фичу
+         * @param <FC> тип конфигурации фичи
+         * @param <F> тип фичи
+         */
         register(context,key,configuraion,List.of(modifiers));
     }
 }

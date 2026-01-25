@@ -21,22 +21,19 @@ public class RustyEffect extends StatusEffect {
         if (!entity.getWorld().isClient() && entity instanceof PlayerEntity player) {
             int baseDamage = amplifier + 1;
 
-            // ====== ПОРЧА БРОНИ ======
             for (ItemStack armorStack : player.getArmorItems()) {
-                int damageAmount = baseDamage; // броня ломается стандартно
+                int damageAmount = baseDamage;
                 damageItem(player, armorStack, damageAmount);
             }
 
-            // ====== ПОРЧА ВСЕГО ИНВЕНТАРЯ ======
             for (int i = 0; i < player.getInventory().size(); i++) {
                 ItemStack stack = player.getInventory().getStack(i);
                 int damageAmount = 0;
 
                 if (stack.isDamageable()) {
                     if (isVanillaTool(stack)) {
-                        damageAmount = baseDamage * 2; // ванильные инструменты ломаются быстрее
+                        damageAmount = baseDamage * 2;
                     } else {
-                        // модовые инструменты ломаются медленно, не больше 1/10 от maxDamage за тик
                         damageAmount = Math.max(1, stack.getMaxDamage() / 10);
                     }
                 }
@@ -45,7 +42,7 @@ public class RustyEffect extends StatusEffect {
             }
         }
 
-        return true; // всегда true, чтобы иконка эффекта отображалась
+        return true;
     }
 
     private void damageItem(PlayerEntity player, ItemStack stack, int damageAmount) {

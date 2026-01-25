@@ -23,6 +23,7 @@ public class ModDimensions {
             Identifier.of(Rusted.MOD_ID, "rusty_deadlands_type"));
 
     public static void bootstrapType(Registerable<DimensionType> context) {
+        //public static void bootstrapType(@NotNull   Registerable<DimensionType> context)
         context.register(RUSTED_DIM_TYPE, new DimensionType(
                 OptionalLong.empty(), // fixedTime
                 true, // hasSkylight

@@ -1,13 +1,13 @@
 {
   "structures": [
     {
-      "structure": "rusted:rusty_camp",
+      "structure": "rusted:ooze_spawn",
       "weight": 1
     }
   ],
   "placement": {
     "salt": 1642136474,
-    "spacing": 30,
+    "spacing": 40,
     "separation": 6,
     "type": "minecraft:random_spread"
   }

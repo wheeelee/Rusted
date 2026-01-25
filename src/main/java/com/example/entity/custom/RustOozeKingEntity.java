@@ -1,10 +1,9 @@
 package com.example.entity.custom;
 
 import com.example.effect.ModEffects;
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
+import com.example.entity.ModEntities;
+import com.example.item.ModItems;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -23,8 +22,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.Util;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import static com.ibm.icu.impl.ValidIdentifiers.Datatype.variant;
 
 public class RustOozeKingEntity extends AnimalEntity {
 
@@ -106,12 +108,13 @@ public class RustOozeKingEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return false;
+        return stack.isOf(ModItems.MONSTER_TREAT);
     }
-
+    @Nullable
     @Override
-    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
+    public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+        RustOozeKingEntity baby = ModEntities.RUST_OOZE_KING.create(world);
+        return baby;
     }
 
     protected SoundEvent getStepSound() {

@@ -159,8 +159,6 @@ public class RustHoundEntity extends AnimalEntity {
             this.setupAnimationStates();
         }
     }
-
-    // Переопределяем метод для определения, атакует ли моб
     @Override
     public boolean isAttacking() {
         return this.getTarget() != null && this.canAttackTarget(this.getTarget());
