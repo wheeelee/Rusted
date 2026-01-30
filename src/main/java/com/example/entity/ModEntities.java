@@ -23,7 +23,7 @@ public class ModEntities {
     public static final EntityType<RustOozeKingEntity> RUST_OOZE_KING = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(Rusted.MOD_ID,"rust_ooze_king"),
             EntityType.Builder.create(RustOozeKingEntity::new,SpawnGroup.CREATURE)
-                    .dimensions(1f,2.5f).build());
+                    .dimensions(1.5f,3.5f).build());
     public static final EntityType<RustHoundEntity> RUST_HOUND = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(Rusted.MOD_ID,"rust_hound"),
             EntityType.Builder.create(RustHoundEntity::new,SpawnGroup.CREATURE)

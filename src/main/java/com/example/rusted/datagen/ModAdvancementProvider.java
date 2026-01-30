@@ -27,6 +27,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.ModStatus;
 import net.minecraft.world.World;
 
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
@@ -71,6 +72,23 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 )
                 .criterion("got_rusty_metal_ore",InventoryChangedCriterion.Conditions.items(ModItems.RUSTY_METAL))
                 .build(consumer, Rusted.MOD_ID + ":got_rusty_metal_ore");
+        AdvancementEntry bred_boss = Advancement.Builder.create()
+                .parent(EnterTheWorld)
+                .display(
+                        ModItems.MONSTER_TREAT,
+                        Text.literal("Селекционер"),
+                        Text.literal("..."),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("bred_boss", BredAnimalsCriterion.Conditions.create(
+                        Optional.ofNullable(EntityPredicate.Builder.create().type(ModEntities.RUST_OOZE_KING).build()),
+                        Optional.ofNullable(EntityPredicate.Builder.create().type(ModEntities.RUST_OOZE_KING).build()),
+                        Optional.of(EntityPredicate.Builder.create().type(ModEntities.RUST_OOZE_KING).build())
+                ))                .build(consumer, Rusted.MOD_ID + ":bred_boss");
         AdvancementEntry got_dirty_crystal = Advancement.Builder.create()
                 .parent(EnterTheWorld)
                 .display(
